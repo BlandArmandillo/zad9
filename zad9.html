@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Zad9 313069</title>
+        <link rel="stylesheet" href="./main.css">
+    </head>
+    <body>
+        <h1>Rozbudowane formularze w HTML5</h1>
+        <form class="formula">
+            <input type="hidden" id="lang" name="lang" value="PL">
+            <label>
+                Imie:<input type="text" id="imie" name="imie" placeholder="Wpisz Imie" autofocus required
+                pattern="^[AaĄąBbCcĆćDdEeĘęFfGgHhIiJjKkLlŁłMmNnŃńOoÓóPpRrSsŚśTtUuWwYyZzŹźŻż]{2,}$"
+                oninvalid="this.setCustomValidity('Pole imię może składać się tylko z liter i musi mieć przynajmniej dwa znaki');"
+                oninput="this.setCustomValidity('');"> 
+            </label>
+            <label>
+                Nazwisko: <input type="text" id="nazwisko" name="nazwisko" placeholder="Wpisz Nazwisko" required
+                pattern="^[AaĄąBbCcĆćDdEeĘęFfGgHhIiJjKkLlŁłMmNnŃńOoÓóPpRrSsŚśTtUuWwYyZzŹźŻż]{2,}$"
+                oninvalid="this.setCustomValidity('Pole nazwisko może składać się tylko z liter i musi mieć przynajmniej dwa znaki');"
+                oninput="this.setCustomValidity('');"> 
+            </label>
+            <label>
+                E-mail: <input type="email" id="email" name="email" placeholder="Wpisz adres e-mail" pattern=".+@.*" size="30" required
+                oninvalid="this.setCustomValidity('Podaj częśc przed znakiem \'\'@\'\'');"
+                oninput="this.setCustomValidity('');"> 
+            </label>
+            <label>
+                Strona WWW: <input type="url" id="url" name="url" placeholder="Wpisz adres strony"
+                pattern="https://.*"
+                required>
+            </label>
+            <label>
+                Hasło: <input type="password" id="password" name="password" placeholder="Podaj hasło" required>
+            </label>
+            <label>
+                Data urodzenia: <input type="date" id="date" name="date">
+            </label>
+            <label>
+                Wiek: <input type="number" id="wiek" name="wiek" min="0">
+            </label>
+            <label>
+                Zakres: <input type="range" id="zakres" name="zakres" min="0" max="100">
+            </label>
+            <fieldset>
+                <legend>Płeć</legend>
+                <label>
+                    <input type="radio" id="men" name="gender" value="men" > Mężczyzna
+                </label>
+                <label>
+                    <input type="radio" id="woman" name="gender" value="women" > Kobieta
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Technologie</legend>
+                <label><input type="checkbox" id="html" name="html"> HTML</label>
+                <label><input type="checkbox" id="css" name="css"> CSS</label>
+                <label><input type="checkbox" id="php" name="php"> PHP</label>
+                <label><input type="checkbox" id="js" name="js"> JavaScript</label>
+            </fieldset>
+            <label>
+                Ulubiony kolor: <input type="color" id="head" name="head" value="#0A0A0A">
+            </label>
+            <label>
+                Plik: <br><input type="file" id="avatar" name="avatar">
+            </label>
+            <input type="submit" value="Wyślij">
+            <input type="reset" value="Wyczyść"> 
+        </form>
+    </body>
+</html>
